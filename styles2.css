@@ -47,8 +47,8 @@ nav {
 
 .parent {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 120px 50px repeat(3, 1fr);
+    grid-template-columns: 260px repeat(5, 1fr);
+    grid-template-rows: 1fr 80px 210px 50px 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 20px;
     }
@@ -59,7 +59,7 @@ nav {
     .div4 { grid-area: 3 / 2 / 4 / 3; }
     .div5 { grid-area: 3 / 7 / 4 / 8; }
     .div6 { grid-area: 4 / 1 / 5 / 8; }
-    .div7 { grid-area: 5 / 1 / 6 / 8; }
+    .divcar{ grid-area: 5 / 1 / 6 / 8;}
 
 
 .title {
@@ -132,44 +132,224 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 40px;
-    padding-left: 15px;
+    padding: 25px 40px 10px 15px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1px;
+    font-size: 15px;
     color: white;
     background-color: rgba(51,51,51,.6);
     border-left:6px solid white;
+    height: 30px;
 }
 
 .div6 {
     padding-left: 70px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    position: absolute;
-    top: 722px;
     color:white;
     text-shadow: 2px 2px black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
     background-color: rgba(187, 185, 185, 0.289);
-    width: 100%;
 }
 
-.c1 {
-    position:absolute;
-    top:758px;
-    left:75px;
-    width:350px;
+.divcar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
 }
 
-.c2 {
-    position:absolute;
-    top:758px;
-    right:75px;
-    width:350px;
+/* Diseño Responsivo */
+
+@media screen and (max-width:1350px) {
+    .div1 {
+        margin-left: 5px;
+        width:520px;
+        height:100%;
+        text-align: center;
+        margin-top: 1px;
+    }
+    
+    .title {
+        width:400px;
+    }
+
+    .div2 {
+        margin-left:70px;
+        width:500px;
+        font-size: 18px;
+    }
+
+    .play {
+        width:150px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .info {
+        width: 200px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .parent {
+        grid-template-columns: 200px repeat(5, 1fr);
+        grid-template-rows: 1fr 70px 50px 50px 1fr;
+    }
+
+    .div5 {
+        height: 40px;
+    }
+
 }
 
-.c3 {
-    position:absolute;
-    top:758px;
-    width:350px;
-    left:500px;
+@media screen and (max-width:900px) {
+    .div1 {
+        margin-left: 0px;
+        width:450px;
+        height:100%;
+        text-align: center;
+        margin-top: 1px;
+    }
+    
+    .title {
+        width:300px;
+    }
+
+    .div2 {
+        margin-left:70px;
+        width:450px;
+        font-size: 16px;
+    }
+
+    .play {
+        width:100px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .info {
+        width: 150px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .bi-info-circle {
+        width: 20px;
+        height: 20px;
+
+    }
+
+    .parent {
+        grid-template-columns: 150px repeat(5, 1fr);
+        grid-template-rows: 1fr 55px 50px 50px 1fr;
+    }
+
+    .div5 {
+        height: 30px;
+    }
+
 }
+
+@media screen and (max-width:750px) {
+    .div1 {
+        margin-left: 0px;
+        width:350px;
+        height:100%;
+        text-align: center;
+        margin-top: 1px;
+    }
+    
+    .title {
+        width:200px;
+    }
+
+    .div2 {
+        margin-left:50px;
+        width:320px;
+        font-size: 12px;
+    }
+
+    .play {
+        width:80px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .info {
+        width: 120px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .div3 {
+        margin-left: 50px;
+    }
+
+    .bi-info-circle {
+        width: 10px;
+        height: 10px;
+
+    }
+
+    .parent {
+        grid-template-columns: 110px repeat(5, 1fr);
+        grid-template-rows: 1fr 40px 50px 50px 1fr;
+    }
+
+    .div5 {
+        font-size: 13px;
+        padding-bottom: 10px;
+    }
+
+
+}
+
+@media screen and (max-width:600px) {
+    .div1 {
+        margin-left: 0px;
+        width:290px;
+        height:100%;
+        text-align: center;
+        margin-top: 1px;
+    }
+    
+    .title {
+        width:150px;
+    }
+
+    .div2 {
+        margin-left:30px;
+        width:240px;
+        font-size: 8px;
+    }
+
+    .play {
+        width:80px;
+        height: 8px;
+        font-size: 8px;
+    }
+
+    .info {
+        width: 100px;
+        height: 8px;
+        font-size: 8px;
+    }
+
+    .parent {
+        grid-template-columns: 85px repeat(5, 1fr);
+        grid-template-rows: 1fr 20px 50px 50px 1fr;
+    }
+
+    .div3 {
+        margin-left: 30px;
+    }
+
+    .div5 {
+        height: 5px;
+        font-size: 10px;
+    }
+
+}
+
+
